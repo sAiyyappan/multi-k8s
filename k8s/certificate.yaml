@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: balikabalida.com-tls
+spec:
+  secretName: balikabalida.com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: balikabalida.com
+  dnsNames:
+    - balikabalida.com
+    - www.balikabalida.com
